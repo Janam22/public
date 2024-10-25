@@ -1,0 +1,8 @@
+[27-Sep-2024 22:52:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/omsokcom/public_html/config/database.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/omsokcom/public_html/config/database.php on line 19
+[27-Sep-2024 22:52:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/omsokcom/public_html/config/database.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/omsokcom/public_html/config/database.php on line 19

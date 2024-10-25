@@ -1,0 +1,120 @@
+
+.sidebar .logo {
+    color: #000;
+    display: flex;
+    align-items: center;
+    padding: 25px 10px 15px;
+}
+.logo img {
+    width: 43px;
+    border-radius: 50%;
+}
+.logo h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-left: 15px;
+    display: none;
+}
+.sidebar:hover .logo h2 {
+    display: block;
+}
+.sidebar .links {
+    list-style: none;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+.sidebar .links::-webkit-scrollbar {
+    display: none;
+}
+.links li {
+    display: flex;
+    border-radius: 4px;
+    height: 24px;
+    align-items: center;
+    margin: 12px 0;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px 0;
+    padding: 18px 0;
+            font-size: 2.5rem;
+}
+/* .links li:hover {
+    cursor: pointer;
+    background: #fff;
+} */
+.links h4 {
+    color: #222;
+    font-weight: 500;
+    display: none;
+    margin-bottom: 10px;
+}
+/* .sidebar:hover .links h4 {
+    display: block;
+} */
+ .leftSideBar {
+    border-radius: 14px;
+    padding: 0 12px 0 0;
+    background: white;
+ }
+.links hr {
+    margin: 10px 8px;
+    border: 1px solid #4c4c4c;
+}
+.sidebar:hover .links hr {
+    border-color: transparent;
+}
+.links li span {
+    padding: 12px 10px;
+}
+.links li a {
+    padding: 10px;
+    font-weight: 500;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 1.6rem;
+    width: 100%;
+}
+.midetailsOfUser {
+justify-content: space-between;
+    gap: 5px;
+}
+.midetailsOfUser .card{
+   min-width: 300px;
+   min-height: 150px;
+}
+
+.links .logout-link {
+    margin-top: 20px;
+}
+
+.dashboardpageLink .card{
+background: #ffffff;
+            border: none;
+    padding: 2px 15px;
+}
+.dashboardpageLink .col-xl-4{
+padding: 0 3px !important;
+}
+.dashboardpageLink .col-xl-8{
+padding: 0 3px !important;
+}
+
+.deff{
+       color: #757575;
+}
+.editBtnAccocut{
+    padding: 0 !important;
+    color: #1a9cb7 !important;
+}
+.pipeSign{
+        margin-left: 5px;
+
+}
+
+tbody td{
+    color: #757575 !important;
+}
+table th{
+color: #777777 !important;
+border-right: 1px solid #c5c5c5;
+text-align: center !important;
+}

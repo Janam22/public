@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --orange: #ff7800;
+    --black: #130f40;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border: .2rem solid rgba(0,0,0,.1);
+    --outline: .1rem solid rgba(0,0,0,.1);
+    --outline-hover: .2rem solid var(--black);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: none;
+    transition: all .1s linear;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+body {
+    background-color: #eee;
+}
+/* ------------------ */
+.ecomNav-header {
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 0 20px 0;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    flex-direction: column;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px -1px 0px 0px;
+    background: var(--dynamic-header-color);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+/* ----------------------------- */
+.searchBar{
+    width: 55vw !important;
+ height: 45px;
+ font-size: 1.6rem !important;
+}
+.searchBarIcin{
+    width: 76px;
+    font-size: 2.8rem !important;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.searchBar, .serchbtn {
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  padding: 1em;
+  background-color: #ccc;
+  transition: .1s ease-in-out;
+  border: none !important;
+}
+
+.searchBar:focus {
+  background-color: white;
+  box-shadow: 13px 13px 100px #ff9100,
+             -13px -13px 100px #ffffff;
+}
+/* --------------------- */
+.ecomNav-header .ecomNav-logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+}
+.ecomNav-header .ecomNav-logo i {
+    color: var(--orange);
+}
+.ecomNav-header .ecomNav-navbar a {
+    font-size: 1.3rem;
+    margin: 0 1rem;
+    color: var(--dynamic-text-color);
+}
+.ecomNav-header .ecomNav-navbar a:hover {
+    color: var(--dynamic-hover-color);
+}
+.ecomNav-header .ecomNav-icons div {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    font-size: 2rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+.ecomNav-header .ecomNav-icons div:hover {
+    background: var(--dynamic-header-color);
+    color: #fff;
+}
+#ecomNav-menu-btn {
+    display: none;
+}
+.ecomNav-header .ecomNav-search-form {
+    position: absolute;
+    top: 110%; right: -110%;
+    width: 50rem;
+    height: 5rem;
+    background: #fff;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+.ecomNav-header .ecomNav-search-form.active {
+    right: 2rem;
+    transition: .1s linear;
+}
+.ecomNav-header .ecomNav-search-form input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0 1.5rem;
+}
+.ecomNav-header .ecomNav-search-form label {
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+.ecomNav-header .ecomNav-search-form label:hover {
+    color: var(--orange);
+}
+.ecomNav-header .ecomNav-shopping-cart {
+    background: #fff;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width: 35rem;
+    top: 110%;
+    right: -110%;
+    position: absolute;
+}
+.ecomNav-header .ecomNav-shopping-cart.active {
+    right: 2rem;
+    transition: .1s linear;
+}
+.ecomNav-content{
+    line-height: 0 !important;
+}
+.ecomNav-header .ecomNav-shopping-cart .ecomNav-box {
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 0;
+border-bottom: 1px solid;
+    max-height: 55px;
+    border-color: var(--dynamic-header-color); ;
+}
+
+.ecomNav-header .ecomNav-shopping-cart .ecomNav-box .fa-trash {
+    font-size: 1.4rem;
+    position: absolute;
+    top: 50%; right: 1.2rem;
+    color: var(--dynamic-header-color); ;
+    transform: translateY(-50%);
+}
+.ecomNav-header .ecomNav-shopping-cart .ecomNav-box .fa-trash:hover {
+    color: var(--orange);
+}
+.ecomNav-header .ecomNav-shopping-cart .ecomNav-box .ecomNav-content h3 {
+    color: var(--black);
+    font-size: 15px;
+        overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    width: 80%;
+}
+.ecomNav-header .ecomNav-shopping-cart .ecomNav-box .ecomNav-content span {
+    color: var(--light-color);
+}
+.ecomNav-header .ecomNav-shopping-cart .ecomNav-box .ecomNav-content .ecomNav-quantity {
+    padding-left: 1rem;
+}
+.ecomNav-header .ecomNav-shopping-cart .ecomNav-total {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--black);
+}
+.ecomNav-header .ecomNav-shopping-cart .ecomNav-btn {
+    display: block;
+    text-align: center;
+}
+.ecomNav-btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+box-shadow: 0px 0px 6px 0px;
+    cursor: pointer;
+    background: none;
+    width: 50%;
+    color: var(--dynamic-header-color);
+        margin: 8px auto 8px auto;
+
+}
+.ecomNav-btn:hover {
+    background: var(--dynamic-hover-color);
+    color: #fff;
+}
+.ecomNav-header .ecomNav-login-form {
+    width: 35rem;
+background-color: white;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    border-radius: .5rem;
+    text-align: center;
+    top: 110%; right: -110%;
+    position: absolute;
+}
+.ecomNav-header .ecomNav-login-form.active {
+    right: 2rem;
+    transition: .1s ease-in-out;
+}
+a button{
+    background-color: transparent;
+}
+.ecomNav-header .ecomNav-login-form h3 {
+    font-size: 1.5rem;
+    color: orangered;
+    text-transform: uppercase;
+}
+.ecomNav-header .ecomNav-login-form .ecomNav-box {
+    width: 100%;
+    margin: .7rem 0;
+    background: #eee;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+}
+.ecomNav-header .ecomNav-login-form p {
+    font-size: 1.4rem;
+    padding: .5rem 0;
+    color: var(--light-color);
+}
+.ecomNav-header .ecomNav-login-form p a {
+    color: var(--orange);
+    text-decoration: underline;
+}
+.upperOptionsNav{
+width: 100%;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: 2fr 3fr 1fr;
+
+}
+.ecomNav-logo{
+margin-left: 20px;
+}
+.ecomNav-icons{
+  margin-right: 20px;
+  display: flex;
+}
+.navAccountName{
+    color: #ffffff;
+    font-size: 22px;
+    margin: 13px 0 0 0;
+}
+.iconParent{
+    height: 40px;
+}
+ .ecomNav-quantity, .ecomNav-price{
+    font-size: 13px;
+}
+.cartImg{
+    width: 31px;
+    height: 31px;
+    border-radius: 50px
+}
+.moreOptionUser{
+    display: none !important;
+}
+.cartImgHeading{
+gap: 11px;
+    display: flex;
+    align-items: center;
+}
+.cartItemDets{
+        height: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-outline-primary{
+    color: orangered !important;
+}
+.cartNum{
+position: absolute;
+    top: -1px;
+    right: 0;
+    color: #ffffff;
+    font-size: 15px;
+    opacity: 80%;
+    background: var(--dynamic-header-color);
+    display: inline-block;
+    border-radius: 31px;
+    width: 16px;
+    height: 16px;
+    line-height: 1;
+    font-weight: 100 !important;
+}
+.ecomNav-profile-options{
+      display: flex !important;
+    flex-direction: column !important;
+    width: fit-content !important;
+}
+.ecomNav-profile-options button{
+    color: #ff0000;
+    width: 44%;
+    margin: 0 auto;
+    margin: 12px auto 0 auto;
+    border-radius: 34px;
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+    font-size: 1.7rem;
+}
+.ecomNav-profile-options button:hover{
+scale: 1.1;
+background-color: rgb(255, 206, 206);
+transition: .1sec ease-in-out;
+}
+.ecomNav-profile-options a{
+    font-size: 1.3rem;
+    text-align: start;
+    color:var(--dynamic-header-color);
+        margin: 7px 0;
+}
+.ecomNav-profile-options a:hover{
+scale: 1.1;
+background-color:#f5f5f1;
+}
+.sidebar .links li a:hover{
+scale: 1.1;
+}
+.ecomNav-profile-options i{
+    font-size: 1.4rem;
+    margin-right: 7px;
+    color:var(--dynamic-header-color);
+}
+/* media queries */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    .ecomNav-header {
+        padding: 2rem;
+    }
+    .fa-tachometer-alt{
+        display: none !important;
+    }
+    .userNameWelcome{
+        display: none !important;
+    }
+    .moreOptionUser{
+        display: block !important;
+    }
+    .loggedInUserIcon{
+            height: 27px;
+    display: flex;
+    align-items: center;
+    }
+    section {
+        padding: 2rem;
+    }
+        .searchBar{
+    width: 70vw !important;
+    font-size: 18px !important;
+}
+.ecomNav-header {
+              padding: 0.7rem 0 8px 0;
+    }
+    .upperOptionsNav{
+        margin-bottom: 12px;
+        display: flex;
+}
+}
+
+@media (max-width: 768px) {
+    #ecomNav-menu-btn {
+        display: inline-block;
+    }
+    .ecomNav-header .ecomNav-search-form {
+        width: 90%;
+    }
+    .ecomNav-header .ecomNav-navbar {
+        position: absolute;
+        top: 110%; right: -110%;
+        width: 30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: #fff;
+    }
+    .ecomNav-header .ecomNav-navbar.active {
+        right: 2rem;
+        transition: .1s linear;
+    }
+    .ecomNav-header .ecomNav-navbar a {
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block;
+        color: rgb(0, 0, 0);
+    }
+
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    .heading {
+        font-size: 2.5rem;
+    }
+    .footer {
+        text-align: center;
+    }
+    .footer .box-container .box .payment-img {
+        margin: 2rem auto;
+    }
+}
+a {
+    text-decoration: none
+     !important;
+}
